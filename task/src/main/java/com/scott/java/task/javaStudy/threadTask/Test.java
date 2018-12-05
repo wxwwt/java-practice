@@ -51,13 +51,13 @@ public class Test {
         System.out.println(test.getLong());
         System.out.println(test.getString());
 
-        Father father = new Father(){
-            public Collection doSth(Map map) {
-                System.out.println("复写方法");
-                return map.values();
-            }
-        };
-        Map map = new HashMap();
-        father.doSth(map);
+//        Father father = new Father(){
+//            public Collection doSth(Map map) {
+//                System.out.println("复写方法");
+//                return map.values();
+//            }
+//        };
+//        Map map = new HashMap();
+//        father.doSth(map);
     }
 }
