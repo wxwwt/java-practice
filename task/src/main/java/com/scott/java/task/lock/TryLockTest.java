@@ -4,20 +4,29 @@ import java.util.ArrayList;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+import static java.lang.Thread.sleep;
+
+/**
+ * @author scott
+ */
 public class TryLockTest {
 
         private ArrayList<Integer> arrayList = new ArrayList<Integer>();
-        private Lock lock = new ReentrantLock();    //注意这个地方
-        public static void main(String[] args)  {
+        //注意这个地方
+        private Lock lock = new ReentrantLock();
+        public static void main(String[] args) throws Exception {
             final TryLockTest test = new TryLockTest();
 
             new Thread(){
+                @Override
                 public void run() {
                     test.insert(Thread.currentThread());
                 };
             }.start();
 
+            //sleep(1000);
             new Thread(){
+                @Override
                 public void run() {
                     test.insert(Thread.currentThread());
                 };
@@ -28,7 +37,7 @@ public class TryLockTest {
             if(lock.tryLock()) {
                 try {
                     System.out.println(thread.getName()+"得到了锁");
-                    for(int i=0;i<5;i++) {
+                    for (int i = 0; i < 5; i++) {
                         arrayList.add(i);
                     }
                 } catch (Exception e) {
