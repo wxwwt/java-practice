@@ -1,8 +1,6 @@
 package com.scott.java.task.annotationTest;
 
-import org.scott.myannotationprocessor.annotation.Test;
 
-@Test
 public class Doctor {
 
     //诊断

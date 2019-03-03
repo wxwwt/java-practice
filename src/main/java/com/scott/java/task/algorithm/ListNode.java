@@ -7,6 +7,6 @@ package com.scott.java.task.algorithm;
 
 public class ListNode {
         int val;
-        com.scott.java.task.algorithm.ListNode next;
+        ListNode next;
         ListNode(int x) { val = x; }
 }

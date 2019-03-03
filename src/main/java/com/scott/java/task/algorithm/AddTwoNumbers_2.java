@@ -1,7 +1,5 @@
 package com.scott.java.task.algorithm;
 
-import lombok.val;
-
 /**
  * @author scott
  * @date 2019/2/28 13:40
@@ -24,28 +22,24 @@ public class AddTwoNumbers_2 {
         System.out.println(re);
     }
 
-    public static ListNode solution(ListNode l1, ListNode l2) {
-        ListNode result = new ListNode(-1);
-        int carry = 0;
-        for (int i = 0; l1.next != null || l2.next != null; ++i, l1 = l1.next, l2 = l2.next) {
-            if (i == 0) {
-                if (l1.val + l2.val >= 10) {
-                    result.val = l1.val + l2.val - 10;
-                    carry = 1;
-                } else {
-                    result.val = l1.val + l2.val;
-                }
-            } else {
-                if (l1.val + l2.val + carry >= 10) {
-                    result.next = new ListNode(l1.val + l2.val + carry - 10);
-                    carry = 1;
-                } else {
-                    result.next = new ListNode(l1.val + l2.val + carry);
-                    carry = 0;
-                }
-            }
+    private static ListNode solution(ListNode l1, ListNode l2) {
+        ListNode result = new ListNode(0);
+        ListNode head = result;
+        int carry = 0, value;
+        while (l1 != null || l2 != null || carry != 0) {
+            ListNode tempNode = new ListNode(0);
+            int sum = (l1 == null ? 0 : l1.val) + (l2 == null ? 0 : l2.val) + carry;
+            carry = sum / 10;
+            value = sum % 10;
+            tempNode.val = value;
+            head.next = tempNode;
+            head = tempNode;
+
+            l1 = l1 == null ? l1 : l1.next;
+            l2 = l2 == null ? l2 : l2.next;
+
         }
-        return result;
+        return result.next;
     }
 
     public static int listNodeCycle(ListNode l1) {
