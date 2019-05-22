@@ -1,6 +1,7 @@
 package com.scott.java.task.algorithm;
 
 /**
+ * 移除第K个元素使剩下的数字形成的整数最小
  * @author scott
  * @time 2018-12-12 13:12:23
  */

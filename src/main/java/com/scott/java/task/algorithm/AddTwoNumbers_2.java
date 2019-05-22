@@ -55,7 +55,14 @@ public class AddTwoNumbers_2 {
         return result;
     }
 
+    public static class ListNode {
+        int val;
+        ListNode next;
 
+        ListNode(int x) {
+            val = x;
+        }
+    }
 }
 
 
