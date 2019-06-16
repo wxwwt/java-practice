@@ -5,7 +5,7 @@
 4.clone.test: 浅克隆和深克隆的例子  
 5.compiler_api: 代码编译java文件 compilper api  
 6.instanceof_test: instaceof的测试例子  
-7.lock: 锁相关的一些例子
+7.lock: 锁相关的一些例子  
 8.multiple_extends_interface: 多继承的一些测试例子  
 9.out_of_memory: 内存溢出测试  
 10.reference: java引用例子  
