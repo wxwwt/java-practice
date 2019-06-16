@@ -1,11 +1,7 @@
 package com.scott.java.task.reference;
 
-import java.lang.ref.*;
-import java.lang.reflect.Field;
-import java.sql.SQLOutput;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.WeakHashMap;
+import java.lang.ref.PhantomReference;
+import java.lang.ref.ReferenceQueue;
 
 /**
  * @author scott
