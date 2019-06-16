@@ -1,7 +1,5 @@
 package com.scott.java.task;
 
-import com.scott.java.task.threadTask.Test;
-
 /**
  * @author scott
  * @date 2019/4/9 22:45
