@@ -1,12 +1,10 @@
-package com.scott.java.task;
+package com.scott.java.task.asm;
 
 import jdk.internal.org.objectweb.asm.ClassWriter;
 import jdk.internal.org.objectweb.asm.MethodVisitor;
 import jdk.internal.org.objectweb.asm.Opcodes;
-import jdk.internal.org.objectweb.asm.Type;
 
 import java.io.FileOutputStream;
-import java.io.PrintStream;
 
 public class AsmTest extends ClassLoader {
 
