@@ -13,3 +13,4 @@
 12.spi: spi  
 13.string: string是否相等的一些例子  
 14.thread: 线程例子  
+15.inputstream: inputStream重复读的解决方式
