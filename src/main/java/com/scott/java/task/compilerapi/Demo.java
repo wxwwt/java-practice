@@ -1,4 +1,4 @@
-package com.scott.java.task.compiler_api;
+package com.scott.java.task.compilerapi;
 
 import java.util.Date;
 

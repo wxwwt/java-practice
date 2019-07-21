@@ -1,4 +1,4 @@
-package com.scott.java.task.annotation_test;
+package com.scott.java.task.annotation;
 
 import javax.annotation.processing.AbstractProcessor;
 import javax.annotation.processing.RoundEnvironment;

@@ -1,4 +1,4 @@
-package com.scott.java.task.annotation_test;
+package com.scott.java.task.annotation;
 
 import javax.annotation.processing.*;
 import javax.lang.model.element.Element;

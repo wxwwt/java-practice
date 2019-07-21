@@ -1,4 +1,4 @@
-package com.scott.java.task.clone_test;
+package com.scott.java.task.clone;
 
 import lombok.Data;
 

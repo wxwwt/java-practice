@@ -1,4 +1,4 @@
-package com.scott.java.task.instanceof_test;
+package com.scott.java.task.instanceoftest;
 
 import java.util.List;
 

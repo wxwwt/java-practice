@@ -1,4 +1,4 @@
-package com.scott.java.task.out_of_memory;
+package com.scott.java.task.outofmemory;
 
 /**
  * @author scott

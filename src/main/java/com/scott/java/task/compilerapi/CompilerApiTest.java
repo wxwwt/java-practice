@@ -1,4 +1,4 @@
-package com.scott.java.task.compiler_api;
+package com.scott.java.task.compilerapi;
 
 import javax.tools.JavaCompiler;
 import javax.tools.ToolProvider;

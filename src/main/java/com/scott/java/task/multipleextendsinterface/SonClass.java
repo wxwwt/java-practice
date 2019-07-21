@@ -1,4 +1,4 @@
-package com.scott.java.task.multiple_extends_interface;
+package com.scott.java.task.multipleextendsinterface;
 
 public class SonClass extends Father {
 
