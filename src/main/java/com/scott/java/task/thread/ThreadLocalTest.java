@@ -2,26 +2,20 @@ package com.scott.java.task.thread;
 
 public class ThreadLocalTest {
 
-    private static final ThreadLocal<String> threadLocal = new ThreadLocal<>();
+    private static ThreadLocal<String> threadLocal1 = ThreadLocal.withInitial(() -> "withInitial的初始值");
 
-    public static void setValue(String var) {
-        threadLocal.set(var);
-    }
-
-    public static String getValue() {
-        return threadLocal.get();
-    }
+    private static ThreadLocal<String> threadLocal2 = new ThreadLocal<String>() {
+        @Override
+        protected String initialValue() {
+            return "override initialValue的初始值";
+        }
+    };
 
     public static void main(String[] args) {
-        for (int i = 0; i < 20; i++) {
-            int finalI = i;
-            ThreadLocalTest.setValue(String.valueOf(finalI));
-            new Thread(() -> {
-                System.out.println(Thread.currentThread().getName() + ": 的flag 是" + ThreadLocalTest.getValue());
-            }, "线程---" + i).start();
-        }
-
-        System.out.println("静态变量的值是:" + ThreadLocalTest.getValue() + Thread.currentThread().getName());
+            Thread thread1 = new Thread();
+            Thread thread2 = new Thread();
+            System.out.println(threadLocal1.get());
+            System.out.println(threadLocal2.get());
     }
 
 //    public static void main(String[] args) {

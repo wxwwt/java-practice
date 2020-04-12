@@ -1,59 +1,50 @@
 package com.scott.java.task.thread;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+
+import java.util.*;
+
 public class Test {
-    ThreadLocal<Long> longLocal = new ThreadLocal<Long>(){
-        protected Long initialValue() {
-            return Thread.currentThread().getId();
-        };
-    };
-    ThreadLocal<String> stringLocal = new ThreadLocal<String>(){
-        protected String initialValue() {
-            return Thread.currentThread().getName();
-        };
-    };
 
+    public static final String FLAG = "@#";
+    private final List<Person> list = new ArrayList<>();
 
-    public void set() {
-        longLocal.set(Thread.currentThread().getId());
-        stringLocal.set(Thread.currentThread().getName());
+    public void add(Person person) {
+        list.add(person);
     }
 
-    public long getLong() {
-        return longLocal.get();
+    public static void main(String[] args) {
+        System.out.println(generatorAnalysis());
     }
 
-    public String getString() {
-        return stringLocal.get();
+    private static String generatorAnalysis() {
+        final String FLAG = "@#";
+        // @#/rank/indexPlus/brand_id/1@#52217050198@#1
+        // 时间戳的差值
+        Long time = System.currentTimeMillis() - 1515125653845L;
+        // 请求的api
+        String baseUrl = "/rank/indexPlus/brand_id/1";
+        StringBuilder builder = new StringBuilder(FLAG);
+        // 拼接字符串的规则 api + @# + 时间戳差值 + @#1
+        builder.append(baseUrl).append(FLAG).append(time).append(FLAG).append(1);
+        // 自定义的加密 这里加密函数不就给出了  可以自己根据断点里面的值推算出来哦
+        String encodeStr = diyEncode(builder.toString());
+        // 最后base编码下
+        return new String(Base64.getEncoder().encode(encodeStr.getBytes()));
     }
 
-    public static void main(String[] args) throws InterruptedException {
-        final Test test = new Test();
-
-        test.set();
-        System.out.println("当前线程是" + test.getString() + "," +test.getLong());
-
-
-
-        Thread thread1 = new Thread(){
-            public void run() {
-                test.set();
-                System.out.println(test.getLong());
-                System.out.println(test.getString());
-            };
-        };
-        thread1.start();
-        thread1.join();
-
-        System.out.println(test.getLong());
-        System.out.println(test.getString());
-
-//        Father father = new Father(){
-//            public Collection doSth(Map map) {
-//                System.out.println("复写方法");
-//                return map.values();
-//            }
-//        };
-//        Map map = new HashMap();
-//        father.doSth(map);
+    public static String diyEncode(String a) {
+        return "aa";
     }
+
+}
+
+@Data
+@AllArgsConstructor
+class Person {
+    private String name;
+
+    private Integer age;
 }
