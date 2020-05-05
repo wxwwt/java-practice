@@ -53,11 +53,11 @@ public class ForLoopRemoveElement {
                 System.out.println("found element3!");
             }
         }*/
-       // 上面的代码反编译就是这个
+        // 上面的代码反编译就是这个
         Iterator var1 = this.list.iterator();
 
-        while(var1.hasNext()) {
-            String item = (String)var1.next();
+        while (var1.hasNext()) {
+            String item = (String) var1.next();
             if ("element2".equals(item)) {
                 this.list.remove(item);
             }
@@ -86,11 +86,12 @@ public class ForLoopRemoveElement {
     public void test5() {
         Iterator<String> iterator = list.iterator();
         while (iterator.hasNext()) {
-            if ("element2".equals(iterator.next())) {
+            String temp = iterator.next();
+            if ("element2".equals(temp)) {
                 iterator.remove();
             }
 
-            if ("element3".equals(iterator.next())) {
+            if ("element3".equals(temp)) {
                 System.out.println("found element3!");
             }
         }
