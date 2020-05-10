@@ -24,13 +24,17 @@
 
 8.multiple_extends_interface: 多继承的一些测试例子  
 9.out_of_memory: 内存溢出测试  
+
 10.reference: java引用例子  
   -[github content](https://github.com/wxwwt/java-practice/tree/master/src/main/java/com/scott/java/task/reference)
   -[blog: java四种引用简介](https://blog.csdn.net/sc9018181134/article/details/90578155)
+  
 11.reflect: 反射  
+
 12.spi: spi  
   -[github content](https://github.com/wxwwt/java-practice/tree/master/src/main/java/com/scott/java/task/spi)
   -[blog:  听过了API咱们来看看SPI是什么](https://blog.csdn.net/sc9018181134/article/details/92416489)
+  
 13.string: string是否相等的一些例子  
 14.thread: 线程例子  
 15.inputstream: inputStream重复读的解决方式
