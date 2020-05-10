@@ -20,20 +20,20 @@
    - [github content](https://github.com/wxwwt/java-practice/tree/master/src/main/java/com/scott/java/task/lock)
    - [blog: 并发编程笔记1:并发bug的成因](https://blog.csdn.net/sc9018181134/article/details/103114748)
    - [blog: 并发编程笔记2_synchronized使用和注意事项](https://juejin.im/post/5dda95fc518825731f569a97)
-   - [blog: 并发编程笔记3_lock](https://juejin.im/post/5e24796d6fb9a02ff112d722)
+   - [blog: 并发编程笔记3_lock](https://juejin.im/post/5e24796d6fb9a02ff112d722)  
 
 8.multiple_extends_interface: 多继承的一些测试例子  
 9.out_of_memory: 内存溢出测试  
 
 10.reference: java引用例子  
-  -[github content](https://github.com/wxwwt/java-practice/tree/master/src/main/java/com/scott/java/task/reference)
-  -[blog: java四种引用简介](https://blog.csdn.net/sc9018181134/article/details/90578155)
+  - [github content](https://github.com/wxwwt/java-practice/tree/master/src/main/java/com/scott/java/task/reference)
+  - [blog: java四种引用简介](https://blog.csdn.net/sc9018181134/article/details/90578155)  
   
 11.reflect: 反射  
 
 12.spi: spi  
-  -[github content](https://github.com/wxwwt/java-practice/tree/master/src/main/java/com/scott/java/task/spi)
-  -[blog:  听过了API咱们来看看SPI是什么](https://blog.csdn.net/sc9018181134/article/details/92416489)
+  - [github content](https://github.com/wxwwt/java-practice/tree/master/src/main/java/com/scott/java/task/spi)
+  - [blog:  听过了API咱们来看看SPI是什么](https://blog.csdn.net/sc9018181134/article/details/92416489)
   
 13.string: string是否相等的一些例子  
 14.thread: 线程例子  
