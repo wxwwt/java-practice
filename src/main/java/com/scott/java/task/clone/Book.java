@@ -5,7 +5,6 @@ package com.scott.java.task.clone;
  * @date 2019/12/22 21:59
  */
 
-import com.alibaba.fastjson.JSONObject;
 import org.assertj.core.util.Lists;
 
 import java.util.List;
@@ -91,6 +90,5 @@ public class Book implements Cloneable {
         book.getChapterList().add(new Chapter("第三章", 2500, 15));
         book.getChapterList().stream().forEach(System.out::println);
         System.out.println(cloneBook.getChapterList().size()); //3
-        System.out.println(JSONObject.toJSONString(cloneBook.getChapterList()));
     }
 }
